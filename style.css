@@ -1,9 +1,9 @@
 :root {
     --primaryColor: #f85606;
     --buttonBg: #ffe1d2;
-    --backgrondColor:#f5f5f5;
+    --backgrondColor:#f4f6fb;
     --light:rgb(255, 255, 255);
-    --itemsBg:#ffc9b8b5;
+    --itemsBg:#ffffff;
 }
 body{
     margin: 0;
@@ -11,6 +11,10 @@ body{
     box-sizing:border-box;
     background: var(--backgrondColor);
     font-family: arial, sans-serif;
+}
+h2{
+    font-weight: 700;
+    color: var(--primaryColor);
 }
 header{
     background: var(--primaryColor);
@@ -102,13 +106,34 @@ main{
     align-items: center;
     background: var(--itemsBg);
     border-radius: 5px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
 }
 .itemImg{
-    width: 260px;
-    height: 260px;
+    width: 150px;
+    height: 150px;
     border-radius: 5px;
+    border: none;
+}
+.itemsDiv{
+    text-align: center;
+    padding-bottom: 15px;
+    
 }
 .itemsDiv p{
     margin: 0px;
     margin-top: 10px;
+    text-align: left;
+    padding: 10px 25px;
 }
+.addToCard{
+    width: 90%;
+    color:var(--light);
+    background: var(--primaryColor);
+    border:none;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+
+
+/* practice */
