@@ -45,3 +45,13 @@
 }
 
 }
+.largeImage {
+    position: relative;
+    height: 500px;   /* or 600px */
+    overflow: hidden;
+}
+.largeImage video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
