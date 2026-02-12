@@ -1,38 +1,48 @@
-// for register
+// REGISTER
 document.getElementById("myForm").addEventListener("submit", function(e){
     e.preventDefault();
-    let names = document.getElementById("name").value;
-    let email = document.getElementById("email").value;
+
+    let names = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
     let password = document.getElementById("password").value;
     let confirmPassword = document.getElementById("c-password").value;
 
-    if (names == "" || email == ""|| password == "" || confirmPassword == "") {
-        alert("You Cant Empty Field");
-    }else if(password !== confirmPassword){
-        alert("password is not same");
-    }else{
-        alert("register successfull");
-        window.location.href="index.html";
+    if (!names || !email || !password || !confirmPassword) {
+        alert("You can't leave fields empty");
+        return;
     }
-})
 
-// for login
-document.getElementById("loginPage").addEventListener("submit",function(e){
+    if (password !== confirmPassword) {
+        alert("Password not same");
+        return;
+    }
+
+    alert("Register successful");
+    window.location.href = "index.html";
+});
+
+
+// LOGIN
+document.getElementById("loginPage").addEventListener("submit", function(e){
     e.preventDefault();
 
-    let names = document.getElementById("login-name").value;
-    let email = document.getElementById("login-email").value;
+    let names = document.getElementById("login-name").value.trim();
+    let email = document.getElementById("login-email").value.trim();
     let password = document.getElementById("login-password").value;
 
-    if(names == "" && email ==""){
-        alert("Fill user name or Email.");
-    }else if(password==""){
-        alert("Enter Correct Password")
-    }else{
-        alert("Login Successfully")
-        window.location.href="index.html";
+    if (!names && !email) {
+        alert("Fill username or email");
+        return;
     }
-})
+
+    if (!password) {
+        alert("Enter password");
+        return;
+    }
+
+    alert("Login successful");
+    window.location.href = "index.html";
+});
 
 
 

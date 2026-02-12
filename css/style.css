@@ -28,7 +28,7 @@ h3 {
 
 section {
     background: var(--light);
-    margin-top: 5rem;
+    margin-top: 5rem !important;
     padding: 2rem;
     border-radius: 1rem;
 
@@ -44,6 +44,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 6;
 }
 
 nav ul {
@@ -224,3 +225,57 @@ footer p a {
     color: white;
     text-decoration: none;
 }
+
+
+video {
+    object-fit: cover;
+    object-position: 50% 60%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+
+
+/* ////  */
+.roleMenu {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dotBtn {
+      font-size: 24px;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    /* hide default arrow */
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .dropdown {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 35px;
+    background: white;
+    width: 140px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+    .dropdown a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: black;
+      text-align: center;
+    }
+
+    .dropdown a:hover {
+      background: #f2f2f2;
+    }
